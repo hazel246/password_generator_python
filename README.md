@@ -20,22 +20,7 @@ To generate a password, simply call the `generate_password()` function with the 
 - **`uppercase`**: Whether the password should include uppercase letters. Set to `1` to include, `0` to exclude. Default is `1`.
 - **`lowercase`**: Whether the password should include lowercase letters. Set to `1` to include, `0` to exclude. Default is `1`.
 
-### Example Usage:
-```python
-new_password = generate_password()
-print(f'Generated password: {new_password}')
 
-This will generate a password of 16 characters, ensuring it contains at least one digit, one special character, one uppercase letter, and one lowercase letter.
-
-Customization:
-To generate a password with different constraints, adjust the function parameters:
-
-python
-Copy
-Edit
-new_password = generate_password(length=12, nums=0, special_chars=0)
-print(f'Generated password: {new_password}')
-This will generate a 12-character password without digits or special characters.
 
 Methods Used
 secrets.choice(): The secrets module securely selects random characters from the available character sets (letters, digits, symbols) to ensure cryptographic strength.
