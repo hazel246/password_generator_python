@@ -21,13 +21,3 @@ To generate a password, simply call the `generate_password()` function with the 
 - **`lowercase`**: Whether the password should include lowercase letters. Set to `1` to include, `0` to exclude. Default is `1`.
 
 
-
-Methods Used
-secrets.choice(): The secrets module securely selects random characters from the available character sets (letters, digits, symbols) to ensure cryptographic strength.
-string.ascii_letters, string.digits, string.punctuation: Predefined sets of characters representing letters, digits, and punctuation, respectively.
-Regular Expressions (re.findall()): Used to check if the generated password satisfies the constraints:
-r'\d' checks for digits.
-fr'[{symbols}]' checks for special characters.
-r'[A-Z]' checks for uppercase letters.
-r'[a-z]' checks for lowercase letters.
-The password is checked against the defined constraints, and if any constraint is not met, a new password is generated.
